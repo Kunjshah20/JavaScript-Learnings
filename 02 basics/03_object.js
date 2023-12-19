@@ -1,15 +1,15 @@
-// singleton
+// singleton - if we declare literals, singletons are not created
 // Object.create
 
 // object literals
 
-const mySym = Symbol("key1")
+const mySymbol = Symbol("key1")
 
 
 const JsUser = {
-    name: "Hitesh",
+    name: "Kunj",
     "full name": "Kunj Shah",
-    [mySym]: "mykey1",
+    [mySymbol]: "mykey1", // don't simply write [mySymbol] = "mykey1" because it's data type will be string
     age: 18,
     location: "Mumbai",
     email: "kunj@gmail.com",
@@ -20,11 +20,11 @@ const JsUser = {
 // console.log(JsUser.email)
 // console.log(JsUser["email"])
 // console.log(JsUser["full name"])
-// console.log(JsUser[mySym])
+// console.log(JsUser[mySymbol])
 
-JsUser.email = "hitesh@chatgpt.com"
+JsUser.email = "kunj@chatgpt.com"
 // Object.freeze(JsUser)
-JsUser.email = "hitesh@microsoft.com"
+JsUser.email = "kunj@microsoft.com"
 // console.log(JsUser);
 
 JsUser.greeting = function(){
