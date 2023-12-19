@@ -24,7 +24,8 @@ const myArr2 = new Array(1, 2, 3, 4)
 // console.log( newArr);
 
 
-// slice, splice
+// slice - original array is not affected
+// splice - original array is affected
 
 console.log("A ", myArr);
 
