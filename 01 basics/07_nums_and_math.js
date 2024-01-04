@@ -1,7 +1,7 @@
 const score = 400
 // console.log(score);
 
-const balance = new Number(100) // to get strictly onlt number
+const balance = new Number(100) // to get strictly only number
 // console.log(balance);
 
 // console.log(balance.toString().length);

@@ -1,0 +1,1 @@
+After every function execution, the execution context of function will be deleted.

@@ -1,0 +1,4 @@
+1. 7th line of code - for every function execution, a new EXECUTION CONTEXT will be created 
+and again the function will have Memory Phase & Execution Phase.
+
+2. The box will created for every individual function execution
