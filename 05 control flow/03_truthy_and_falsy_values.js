@@ -19,17 +19,24 @@ if (userEmail) {
 
 const emptyObj = {}
 
+// Object.keys(emptyObj) - returns array at end of day
 if (Object.keys(emptyObj).length === 0) {
     console.log("Object is empty");
 }
 
-// Nullish Coalescing Operator (??): null undefined
+
+// false == 0 - gives true
+// false == '' - gives true
+// 0 = '' - gives true
+
+// Nullish Coalescing Operator (??): null, undefined
 
 let val1;
 // val1 = 5 ?? 10
 // val1 = null ?? 10
-// val1 = undefined ?? 15
-val1 = null ?? 10 ?? 20
+// val1 = undefined ?? 15 
+val1 = null ?? undefined ?? 20
+// val1 = null ?? 10 ?? 20
 
 
 
