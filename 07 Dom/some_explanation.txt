@@ -1,0 +1,5 @@
+HTMLCollections, NodeList and Arrays are different from each other.
+
+NodeList - has proeprty of forEach
+
+HTMLCollections -  can't work with forEach, we have to convert it to array using Array.from
