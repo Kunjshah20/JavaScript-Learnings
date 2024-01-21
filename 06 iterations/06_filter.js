@@ -14,15 +14,16 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //     return num > 4
 // } )
 
-// const newNums = []
+const newNums = []
 
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
+// original number doesn't get affected
+myNums.forEach( (num) => {
+    if (num > 4) {
+        newNums.push(num)
+    }
+} )
 
-// console.log(newNums);
+console.log(newNums);
 
 
 const books = [
@@ -37,6 +38,7 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
 ];
 
+// original array doesn't get affected
 let userBooks = books.filter( (bk) => bk.genre === 'History')
 
 userBooks = books.filter( (bk) => { 
