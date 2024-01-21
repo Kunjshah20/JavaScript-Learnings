@@ -11,7 +11,7 @@ const startOver = document.querySelector(".resultParas");
 const p = document.createElement("p");
 
 let prevGuess = [];
-let numberOfGuesses = 0;
+let numberOfGuesses = 1;
 
 let playGame = true;
 
@@ -33,7 +33,7 @@ const validateGuess = (guess) => {
   } else {
     prevGuess.push(guess);
 
-    if (numberOfGuesses === 11) {
+    if (numberOfGuesses === 10) {
       displayGuess(guess);
       displayMessage(`Game Over. Random number was ${randomNumber}`);
       endGame();
@@ -58,8 +58,8 @@ const checkGuess = (guess) => {
 const displayGuess = (guess) => {
   userInput.value = ""; // basically cleanup method
   guessSlot.innerHTML += `${guess}, `;
+  remainingGuesses.innerHTML = `${10 - numberOfGuesses}`;
   numberOfGuesses++;
-  remainingGuesses.innerHTML = `${11 - numberOfGuesses}`;
 };
 
 const displayMessage = (message) => {
@@ -77,13 +77,17 @@ const endGame = () => {
 };
 
 const newGame = () => {
+  console.clear();
   const newGameButton = document.querySelector("#newGame");
   newGameButton.addEventListener("click", function (e) {
+    lowOrHigh.innerHTML = "";
     randomNumber = parseInt(Math.random() * 100 + 1);
+    console.log(randomNumber);
     prevGuess = [];
-    numberOfGuesses = 1;
+    numberOfGuesses = 0;
     guessSlot.innerHTML = "";
-    remainingGuesses.innerHTML = `${11 - numberOfGuesses} `;
+    remainingGuesses.innerHTML = `${10 - numberOfGuesses} `;
+    numberOfGuesses++;
     userInput.removeAttribute("disabled");
     startOver.removeChild(p);
 
