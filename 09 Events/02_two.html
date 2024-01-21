@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <h1>Kunj</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const saykunj = () => {
+        console.log("Kunj");
+    }
+
+    const changeText = () => {
+        console.log("kunzz");
+        document.querySelector("h1").innerHTML = "Kunzzzz"
+    }
+    
+    const changeMe = setTimeout(changeText ,2000)
+    // setTimeout(saykunj ,2000)  // we can execute it by reference also
+
+    document.querySelector("#stop").addEventListener("click", () => {
+        clearTimeout(changeMe)
+        console.log("Stopped");
+    })
+</script>
+</html>
