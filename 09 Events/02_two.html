@@ -21,10 +21,10 @@
     }
     
     const changeMe = setTimeout(changeText ,2000)
-    // setTimeout(saykunj ,2000)  // we can execute it by reference also
+    // setTimeout(saykunj ,2000)  // we can execute it by reference also (that function written in setTimout, can also be called HANDLER)
 
     document.querySelector("#stop").addEventListener("click", () => {
-        clearTimeout(changeMe)
+        clearTimeout(changeMe) // clearInterval always requires reference (variable name) of setTimeouts
         console.log("Stopped");
     })
 </script>
