@@ -1,1 +1,5 @@
 Js is not OOP but Prototyped Based Language.
+
+JS follows prototypal behaviour.
+
+Arrays, strings, etc. are all OBJECTS only which then points to null
